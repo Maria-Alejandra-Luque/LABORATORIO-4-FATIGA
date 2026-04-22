@@ -3,7 +3,7 @@
 Identificar cambios en las características espectrales de una
 señal electromiográfica (EMG) cuando se alcanza la fatiga muscular.
 ## Objetivos Específicos:
-1.Aplicar el filtrado de señales continuas para el procesamiento una señal
+1. Aplicar el filtrado de señales continuas para el procesamiento una señal
 electromiográfica (EMG).
 
 2. Detectar la aparición de fatiga muscular mediante el análisis espectral de
