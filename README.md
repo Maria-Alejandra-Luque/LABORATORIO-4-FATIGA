@@ -1,15 +1,18 @@
 # LABORATORIO-4-FATIGA
-Objetivo General: 
+## Objetivo General: 
 Identificar cambios en las características espectrales de una
 señal electromiográfica (EMG) cuando se alcanza la fatiga muscular.
 ## Objetivos Específicos:
 1.Aplicar el filtrado de señales continuas para el procesamiento una señal
 electromiográfica (EMG).
+
 2. Detectar la aparición de fatiga muscular mediante el análisis espectral de
 contracciones musculares individuales.
-3. Comparar el comportamiento de una señal emulada y una señal real en
+
+4. Comparar el comportamiento de una señal emulada y una señal real en
 términos de frecuencia media y mediana.
-4. Emplear herramientas computacionales para el procesamiento,
+
+5. Emplear herramientas computacionales para el procesamiento,
 segmentación y análisis de señales biomédicas. 
 
 
