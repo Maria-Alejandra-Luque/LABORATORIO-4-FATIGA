@@ -470,6 +470,9 @@ señal EMG real.
  ### B
  ### C
  #### D 
+ ##### ALGORITMO
+ <img width="158" height="347" alt="image" src="https://github.com/user-attachments/assets/d991665e-6429-4e66-85fc-c978be3c39fd" /><br>
+ ##### CODIGO
  ```
  from scipy.signal import spectrogram
 nperseg = 256
@@ -495,6 +498,8 @@ Este fragmento calcula y visualiza el espectrograma de la señal EMG, mostrando 
 En el espectrograma de la señal EMG se observa que la mayor concentración de energía se mantiene principalmente en el rango de 50 a 150 Hz a lo largo de todo el registro, lo cual es típico de la actividad muscular. Sin embargo, al analizar la evolución temporal, se evidencia una ligera reducción de la intensidad en las frecuencias más altas y un aumento relativo en las bajas, lo que sugiere un desplazamiento espectral asociado a la fatiga muscular. También se distinguen zonas con mayor intensidad de color (amarillo) que corresponden a momentos de mayor activación muscular, intercaladas con regiones de menor potencia. Adicionalmente, se pueden notar bandas horizontales tenues que podrían estar relacionadas con componentes específicas o ruido residual, pero en general la señal muestra un comportamiento estable con variaciones progresivas que reflejan cambios en el esfuerzo del músculo a lo largo del tiempo.
 
 ### E
+##### ALGORITMO 
+##### CODIGO
 ```
 seg_inicio = x_filt[0:L]
 seg_final = x_filt[-L:]
