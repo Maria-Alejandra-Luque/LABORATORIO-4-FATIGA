@@ -464,8 +464,37 @@ En la gráfica de evolución de la fatiga muscular se observa que la frecuencia 
 ### CODIGO
 Para la primera parte se busco aplicar la Transformada Rápida de Fourier (FFT) a cada contracción de la
 señal EMG real.
- ### A
- 
+El codigo propuesto para cumplir los items, fue
+  ```
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import find_peaks, butter, filtfilt
+from scipy.fft import fft, fftfreq
+
+ ```
+numpy se utilizó para el manejo de arreglos y  las operaciones matemáticas que se deben aplicar sobre la señal.
+
+matplotlib.pyplot permite  generar todas las gráficas solicitadas.
+
+De scipy.signal se importaron tres funciones: find_peaks para la detección automática de cada una de las contracciones, butter para el diseño del filtro Butterworth pasabanda, y filtfilt para aplicarlo sin introducir desfase en la señal. Finalmente, de la libreria scipy.fft se importaron fft para calcular la Transformada Rápida de Fourier y fftfreq.
+
+Se utilizó la función butter en lugar de firwin debido a que se está utilizando un filtro butterworth en lugar de un hamming 
+
+En esta parte la señal fue adquirida en un archivo de seis columnas Por ende fue necesario especificar en la columna 5 donde se contiene la señal EMG
+
+```
+data_raw = np.loadtxt(ruta_archivo, comments='#', delimiter='\t', usecols=(0,1,2,3,4,5))
+emg_raw  = data_raw[:, 5]
+```
+
+ Luego se realizó la conversión de la señal a milivoltios, entonces se  divide el valor digital entre 1024 para normalizar entre 0 y 1, luego le resta 0.5 para centrar en cero, y finalmente lo multiplica por 3.3. Además  con np.mean(emg) se elimina cualquier componente restante de de corriente continua (DC) 
+
+ ```
+emg = ((emg_raw / 1024.0) - 0.5) * 3.3 * 1000
+emg = emg - np.mean(emg)
+```
+
+
 ## PARTE C
 
  ### A
