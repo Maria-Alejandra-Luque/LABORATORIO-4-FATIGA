@@ -529,7 +529,7 @@ idx_med   = np.where(cumsum >= cumsum[-1] / 2)[0]
 f_mediana = xf_f[idx_med[0]] if len(idx_med) > 0 else 0
 
 ``` 
-![28](28_FFT.png)
+![28](28.png)
 en esta grafica se muestra el espectro de amplitud de cada una de las 27 contracciones con sus respectivas frecuencias media (línea roja) y mediana (línea verde) marcadas. Permite observar cómo varía el contenido frecuencial a lo largo de las contracciones
 
  ### C
