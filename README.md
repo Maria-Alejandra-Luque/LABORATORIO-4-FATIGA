@@ -503,7 +503,7 @@ x_filt = filtfilt(b, a, emg)
 
 
  Para identificar cada contracción se aplicó la función find_peaks El valor absoluto de la señal filtrada,  el umbral se definió Dos. Tres veces la desviación estándar de la señal,  para la obtención de 27 muestras de contracción,  el parámetro distance=1000 Garantiza que la distancia entre dos picos detectados sea de al menos 100 muestras de separación
- ![deteccion_contracciones](C_1_deteccion_contracciones.png)
+ ![27](27.png)
 
  Luego de la identificación de picos se hizo una ventana de 400 muestras antes y después de cada uno, Se usaron max y min para evitar que la ventana se salga de los límites de la señal.
  ![segmentos](segmentos.png)
@@ -520,7 +520,15 @@ xf  = fftfreq(N, 1/Fs)[:N//2]
 psd = np.abs(yf[:N//2]) ** 2
 amp = np.abs(yf[:N//2]) / N
 ```
- 
+ La frecuencia media y mediana se calcularon de la misma forma que en la Parte A:
+```
+f_media = np.sum(xf_f * psd_f) / np.sum(psd_f)
+
+cumsum    = np.cumsum(psd_f)
+idx_med   = np.where(cumsum >= cumsum[-1] / 2)[0]
+f_mediana = xf_f[idx_med[0]] if len(idx_med) > 0 else 0
+
+``` 
 
  ### C
  #### D 
