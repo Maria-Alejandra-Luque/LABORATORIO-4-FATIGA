@@ -103,11 +103,12 @@ Finalmente, el comando find_peaks se encarga de buscar todos los picos que cumpl
 1. Que superen el umbral calculado
 2. Que estén separados entre sí por al menos Distanciapicos = 200 muestras (equivalente a 0.2 segundos)
    ```
-   print(f"Contracciones detectadas: {len(picos)}")
-print(f"Posiciones (muestras): {picos}")
-print(f"Tiempos (s): {tiempo[picos].round(3)}")
+
    ```
 ![deteccion_contracciones](2_deteccion_contracciones.png)
+
+
+
 ## PARTE B 
 En la parte B se realizará el procesamiento y análisis de una señal electromiográfica (EMG) adquirida por medio del BITalino y sus respectivos electrodos con el objetivo de
 evaluar el comportamiento espectral asociado a la fatiga muscular. Para ello, la señal será preprocesada mediante la eliminación del componente DC y la aplicación de un
