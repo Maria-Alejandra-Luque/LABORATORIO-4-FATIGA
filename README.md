@@ -547,6 +547,9 @@ for i in range(n_comp):
 
 
 ```
+![29](29.png)
+En la Gráfica se puede apreciar los espectros de las primeras y últimas contracciones.
+En las contracciones iniciales Se aprecia que tienen mayor amplitud en el espectro especialmente en el rango de 20 a 150 Hz Encontraste con las contracciones finales en donde su amplitud disminuye notablemente y sus picos espectrales son menos pronunciados,  este comportamiento es evidencia de la fatiga muscular,  ya que el músculo fatigado usa menos unidades motoras y con menor sincronización lo que reduce Por ende la energía de la señal
 
  #### D 
  ##### ALGORITMO
