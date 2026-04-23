@@ -20,7 +20,8 @@ segmentación y análisis de señales biomédicas.
 
 ## PARTE A 
 
-En esta Parte
+En esta parte de laboratorio se realizó el procesamiento y análisis de una señal EMG simulada obtenida por un generador de ondas de laboratorio,  El objetivo principal fue aplicar las técnicas de filtrado, segmentación y análisis espectral sobre una señal controlada, lo que permite verificar el correcto funcionamiento del código antes de aplicarlo sobre una señal real. a esta señal se le aplicó un filtro fir con ventana hamming para eliminar las frecuencias no deseadas ademas y se calculó la frecuencia media y mediana de cada una mediante la Transformada Rápida de Fourier (FFT)
+
 ### ALGORITMO 
 
 ### CODIGO 
@@ -205,9 +206,51 @@ plt.show()
 ```
 
 Se calcularon ambas frecuencias en función del número de contracción, utilizando puntos para identificar la frecuencia media y cuadrados para identificar la frecuencia mediana 
+
 ![evolucion_frecuencias](5_evolucion_frecuencias.png)
+
 Cómo se puede observar en la gráfica,  las frecuencias no presentan una tendencia descendente a lo largo de cada contracción, al contrario oscilan entre cada contracción.  esto tiene lógica debido a que la señal analizada es simulada,  Por ende las contracciones son principalmente idénticas entre sí y no se puede observar una Clara fatiga muscular real
 
+Tal y como lo requiere la guía se realizó una tabla con los resultados obtenidos para cada contracción registrada, En la cual se incluyó la frecuencia media la frecuencia mediana y la duración de cada segmento
+```
+print("\n" + "=" * 55)
+print("  RESULTADOS POR CONTRACCIÓN")
+print("=" * 55)
+print(f"{'#':>4} | {'F. Media (Hz)':>14} | {'F. Mediana (Hz)':>16} | {'Duración (ms)':>13}")
+print("-" * 55)
+for i, (fm, fmed, seg) in enumerate(zip(freq_medias, freq_medianas, segmentos)):
+    dur = len(seg) / Fs * 1000
+    print(f"  {i+1:>2} | {fm:>14.2f} | {fmed:>16.2f} | {dur:>13.1f}")
+print("=" * 55)
+print(f"{'Prom':>4} | {np.mean(freq_medias):>14.2f} | {np.mean(freq_medianas):>16.2f} |")
+print(f"{'Std':>4} | {np.std(freq_medias):>14.2f} | {np.std(freq_medianas):>16.2f} |")
+print("=" * 55)
+
+```
+La tabla obtenida fue:
+```
+=======================================================
+  RESULTADOS POR CONTRACCIÓN
+=======================================================
+   # |  F. Media (Hz) |  F. Mediana (Hz) | Duración (ms)
+-------------------------------------------------------
+   1 |         126.19 |            97.14 |         175.0
+   2 |         101.99 |            80.00 |         300.0
+   3 |         114.34 |            70.00 |         300.0
+   4 |         124.26 |            96.67 |         300.0
+   5 |         102.82 |            83.33 |         300.0
+   6 |         107.52 |            70.00 |         300.0
+   7 |         124.45 |            96.67 |         300.0
+   8 |         103.63 |            83.33 |         300.0
+   9 |         101.71 |            66.67 |         300.0
+  10 |         119.58 |            86.67 |         300.0
+=======================================================
+Prom |         112.65 |            83.05 |
+ Std |           9.72 |            10.96 |
+=======================================================
+```
+Al observar con detenimiento la tabla la frecuencia media de las  contracciones se mueve entre 101 y 126 hz,  también se observa que la frecuencia mediana tiene variaciones entre 67 y 97 hz.
+Al observar la contracción uno se observa una duración menor debido a que el pico fue detectado cerca del inicio de la señal, por lo que la señal quedó más recortada en ese extremo
 
 ## PARTE B 
 En la parte B se realizará el procesamiento y análisis de una señal electromiográfica (EMG) adquirida por medio del BITalino y sus respectivos electrodos con el objetivo de
