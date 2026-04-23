@@ -119,7 +119,7 @@ filtro pasa banda entre 20 y 450 Hz. Posteriormente, se dividirá en ventanas co
 Finalmente, se calcularán la frecuencia media y la frecuencia mediana para cada ventana, con el fin de analizar la evolución de estas magnitudes a lo largo del tiempo.<br>
 
 ### ALGORITMO 
-<img width="137" height="277" alt="image" src="https://github.com/user-attachments/assets/dbdd3372-04b0-490b-acde-df3a96fe6efe" />
+<img width="437" height="677" alt="image" src="https://github.com/user-attachments/assets/dbdd3372-04b0-490b-acde-df3a96fe6efe" />
 
 ### CODIGO 
 
