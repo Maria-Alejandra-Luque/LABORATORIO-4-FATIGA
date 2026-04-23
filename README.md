@@ -119,6 +119,7 @@ filtro pasa banda entre 20 y 450 Hz. Posteriormente, se dividirá en ventanas co
 Finalmente, se calcularán la frecuencia media y la frecuencia mediana para cada ventana, con el fin de analizar la evolución de estas magnitudes a lo largo del tiempo.<br>
 
 ### ALGORITMO 
+<img width="137" height="277" alt="image" src="https://github.com/user-attachments/assets/dbdd3372-04b0-490b-acde-df3a96fe6efe" />
 
 ### CODIGO 
 
@@ -168,6 +169,8 @@ y se obtienen sus coeficientes con butter. Luego, en lugar de usar una función 
 se crea una función que aplica el filtro mediante la ecuación en diferencias, calculando cada muestra
 de salida a partir de valores actuales y pasados de la entrada y de la salida. Finalmente, esta función 
 se usa para obtener la señal filtrada.<br>
+<img width="1600" height="1220" alt="image" src="https://github.com/user-attachments/assets/6a7b7e0f-c4d6-49e0-b095-858c75a78d4b" /><br>
+
 
 ```
 plt.figure()
@@ -304,4 +307,5 @@ En el espectro de la ventana 6 se observa que la mayor parte de la potencia se c
 
 <img width="441" height="338" alt="image" src="https://github.com/user-attachments/assets/7abe2fa0-58f9-41ae-9303-fd5850e1df3d" /><br>
 En la gráfica de evolución de la fatiga muscular se observa que la frecuencia mediana presenta una tendencia descendente a medida que avanzan las ventanas, pasando de valores cercanos a 87 Hz hasta aproximadamente 80 Hz, lo cual es un indicador típico de fatiga muscular. Por otro lado, la frecuencia media se mantiene relativamente estable alrededor de los 95–97 Hz durante las primeras ventanas, pero muestra una ligera disminución hacia el final. Este comportamiento sugiere que, aunque la actividad global se mantiene, hay un desplazamiento del contenido espectral hacia frecuencias más bajas, confirmando la aparición progresiva de fatiga en el músculo analizado.<br>
-## PARTE C 
+
+ ## PARTE C
