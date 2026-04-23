@@ -104,13 +104,34 @@ Al usar la señal filtrada ee pusieron todos los valores negativos en cero para 
 Finalmente, el comando find_peaks se encarga de buscar todos los picos que cumplan dos condiciones:
 1. Que superen el umbral calculado
 2. Que estén separados entre sí por al menos Distanciapicos = 200 muestras (equivalente a 0.2 segundos)
+
    ```
-print(f"Contracciones detectadas: {len(picos)}")
-print(f"Posiciones (muestras): {picos}")
-print(f"Tiempos (s): {tiempo[picos].round(3)}")
+   print(f"Contracciones detectadas: {len(picos)}")
+   print(f"Posiciones (muestras): {picos}")
+   print(f"Tiempos (s): {tiempo[picos].round(3)}")
    ```
+   
 ![deteccion_contracciones](2_deteccion_contracciones.png)
- ```
+
+Al analizar la Gráfica obtenida se puede  observar que la línea roja representa el umbral calculado que corresponde al 45% del máximo positivo de la señal,  se pueden apreciar el cálculo de 10 picos detectados, cada pico representa una contracción muscular,  la sección de color muestran la ventana de muestras de la que se extrajo alrededor de cada pico para formar el segmento de contracción
+
+Luego de la identificacion de cada piso, se extrajo un segmento de señal al rededor de cada pico
+
+
+```
+segmentos = []
+for pico in picos:
+    inicio = max(0, pico - Ventana)
+    fin    = min(len(senal_filtrada), pico + Ventana)
+    segmentos.append(senal_filtrada[inicio:fin])
+```
+Para cada pico detectado se recortó una ventana de 150 muestras antes y 150 muestras después, obteniendo así un segmento de 300 muestras por contracción,  además se utilizó min y Max para evitar que la ventana se salga de los límites de la señal
+
+![segmentos_individuales](3_segmentos_individuales.png)
+
+
+Como se observa en la Gráfica cada segmento muestra la actividad muscular en el pico de contracción,  al observar detalladamente todos los segmentos presentan una forma parecida con una deflexión central pronunciada correspondiente al momento de máxima activación muscular.
+
 
 
 ## PARTE B 
