@@ -462,8 +462,13 @@ En la gráfica de evolución de la fatiga muscular se observa que la frecuencia 
  ## PARTE C
 
 
- ### Preguntas para la discución
+ ### Preguntas para la discusión
  1. ¿Cambian los valores de frecuencia media y mediana a medida que el
 músculo se acerca a la fatiga? ¿A qué podría atribuirse este cambio?
-2.  ¿Cómo justifica el uso de herramientas como la transformada de Fourier en
+
+3.  ¿Cómo justifica el uso de herramientas como la transformada de Fourier en
 escenarios como, por ejemplo, terapias de rehabilitación?
+
+La FFT al permitir analizar el contenido frecuencial de la señal EMG de forma no invasiva, permite  monitorear la salud muscular de un paciente en estado de rehabilitación sin la necesidad de realizar procedimientos invasivos. Al seguir la evolución de la frecuencia media y mediana a lo largo del tiempo, el terapeuta puede deterrminar si el musculo presenta signos de mejoria  o si aún presenta signos de fatiga, asi para ir ajustando el plan de rehabilitación según los datos obtenidos en favor de la recuperacion del paciente
+
+### Colclusiones 
