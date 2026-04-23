@@ -317,4 +317,5 @@ En el espectro de la ventana 6 se observa que la mayor parte de la potencia se c
 <img width="441" height="338" alt="image" src="https://github.com/user-attachments/assets/7abe2fa0-58f9-41ae-9303-fd5850e1df3d" /><br>
 En la gráfica de evolución de la fatiga muscular se observa que la frecuencia mediana presenta una tendencia descendente a medida que avanzan las ventanas, pasando de valores cercanos a 87 Hz hasta aproximadamente 80 Hz, lo cual es un indicador típico de fatiga muscular. Por otro lado, la frecuencia media se mantiene relativamente estable alrededor de los 95–97 Hz durante las primeras ventanas, pero muestra una ligera disminución hacia el final. Este comportamiento sugiere que, aunque la actividad global se mantiene, hay un desplazamiento del contenido espectral hacia frecuencias más bajas, confirmando la aparición progresiva de fatiga en el músculo analizado.<br>
 
+***TRABAJADO EN JUPYTER NOTEBOOK:http://localhost:8888/doc/tree/lab4.ipynb***
  ## PARTE C
