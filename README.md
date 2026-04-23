@@ -460,3 +460,10 @@ En la gráfica de evolución de la fatiga muscular se observa que la frecuencia 
 
 ***TRABAJADO EN JUPYTER NOTEBOOK:http://localhost:8888/doc/tree/lab4.ipynb***
  ## PARTE C
+
+
+ ### Preguntas para la discución
+ 1. ¿Cambian los valores de frecuencia media y mediana a medida que el
+músculo se acerca a la fatiga? ¿A qué podría atribuirse este cambio?
+2.  ¿Cómo justifica el uso de herramientas como la transformada de Fourier en
+escenarios como, por ejemplo, terapias de rehabilitación?
