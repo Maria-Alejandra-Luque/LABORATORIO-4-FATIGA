@@ -460,6 +460,10 @@ En la gráfica de evolución de la fatiga muscular se observa que la frecuencia 
 
 ***TRABAJADO EN JUPYTER NOTEBOOK:http://localhost:8888/doc/tree/lab4.ipynb***
  ## PARTE C
+### ALGORITMO 
+### CODIGO
+Para la primera parte se busco aplicar la Transformada Rápida de Fourier (FFT) a cada contracción de la
+señal EMG real.
 
 
  ### Preguntas para la discusión
@@ -472,4 +476,4 @@ escenarios como, por ejemplo, terapias de rehabilitación?
 La FFT al permitir analizar el contenido frecuencial de la señal EMG de forma no invasiva, permite  monitorear la salud muscular de un paciente en estado de rehabilitación sin la necesidad de realizar procedimientos invasivos. Al seguir la evolución de la frecuencia media y mediana a lo largo del tiempo, el terapeuta puede deterrminar si el musculo presenta signos de mejoria  o si aún presenta signos de fatiga, asi para ir ajustando el plan de rehabilitación según los datos obtenidos en favor de la recuperacion del paciente
 
 ### Conclusiones 
-1. Para la parte A a partir de la práctica se puede concluir que el procesamiento de señales EMG mediante filtrado FIR pasabanda, segmentación por detección de picos y análisis espectral con FFT permite identificar la actividad muscular de forma objetiva con la finalidad de dar un buen diagnostico . En la señal  se verificó el correcto funcionamiento del código al obtener frecuencias medias y medianas estables entre contracciones, lo cual es coherente con el origen artificial de la señal. Respecto a la factibilidad de emplear técnicas espectrales en escenarios no controlados, como el entrenamiento de atletas, se puede decir que es viable siempre que se garantice una buena calidad en la adquisición de la señal, ya que factores como el movimiento y la sudoración pueden introducir artefactos que distorsionan el análisis. No obstante, con los filtros adecuados y una correcta colocación de electrodos, la EMG de superficie sigue siendo una herramienta no invasiva y práctica para la detección temprana de fatiga muscular.
+1. Para la parte A a partir de la práctica se puede concluir que el procesamiento de señales EMG mediante filtrado FIR pasabanda, segmentación por detección de picos y análisis espectral con FFT permite identificar la actividad muscular de forma objetiva con la finalidad de dar un buen diagnostico al paciente . En la señal  se verificó el correcto funcionamiento del código al obtener frecuencias medias y medianas visibles en las contracciones, lo cual es coherente con el origen simulado de la señal, la EMG de superficie sigue siendo una herramienta no invasiva y práctica para la detección temprana de fatiga muscular.
