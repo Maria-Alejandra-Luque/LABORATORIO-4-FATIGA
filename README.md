@@ -19,6 +19,8 @@ segmentación y análisis de señales biomédicas.
 
 
 ## PARTE A 
+
+En esta Parte
 ### ALGORITMO 
 
 ### CODIGO 
