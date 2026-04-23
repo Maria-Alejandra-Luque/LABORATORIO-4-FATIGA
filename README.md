@@ -1,4 +1,6 @@
 # LABORATORIO-4-FATIGA
+
+Este laboratorio consiste en capturar y analizar señales de los músculos (EMG) para observar cómo cambian sus propiedades de tiempo y frecuencia mientras se realiza un ejercicio específico.
 ## Objetivo General: 
 Identificar cambios en las características espectrales de una
 señal electromiográfica (EMG) cuando se alcanza la fatiga muscular.
