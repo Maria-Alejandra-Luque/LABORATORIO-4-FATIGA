@@ -526,9 +526,10 @@ En esta gráfica se compara el espectro al inicio y al final de la señal. Se ob
 
 
 ### F
-```
+El análisis espectral de la señal electromiográfica se consolida como una herramienta confiable para la evaluación de la fatiga muscular. A partir de la distribución de energía en el dominio de la frecuencia, se evidenció una disminución progresiva del contenido de altas frecuencias y un desplazamiento del espectro hacia componentes de menor frecuencia a medida que avanzaba el tiempo de contracción. Estos cambios reflejan fenómenos fisiológicos como la reducción en la velocidad de conducción de las fibras musculares y el mayor reclutamiento de unidades motoras de contracción lenta.<br>
 
-```
+Además, el uso de parámetros como la frecuencia media y la frecuencia mediana permitió cuantificar objetivamente la evolución de la fatiga, complementando el análisis espectral. En conjunto, estos resultados demuestran que el análisis en frecuencia es una herramienta eficaz no solo para describir la señal EMG, sino también para inferir el estado funcional del músculo, destacando su importancia en aplicaciones clínicas, deportivas y de rehabilitación.<br>
+
 
  ### Preguntas para la discusión
  1. ¿Cambian los valores de frecuencia media y mediana a medida que el
