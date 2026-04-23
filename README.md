@@ -464,6 +464,36 @@ En la gráfica de evolución de la fatiga muscular se observa que la frecuencia 
 ### CODIGO
 Para la primera parte se busco aplicar la Transformada Rápida de Fourier (FFT) a cada contracción de la
 señal EMG real.
+## PARTE C
+
+ ### A
+ ### B
+ ### C
+ #### D 
+ ```
+ from scipy.signal import spectrogram
+nperseg = 256
+noverlap = 200
+
+f, t, Sxx = spectrogram(x_filt, fs, nperseg=nperseg, noverlap=noverlap)
+
+Sxx_dB = 10 * np.log10(Sxx + 1e-12)
+plt.figure(figsize=(10,5))
+
+plt.pcolormesh(t, f, Sxx_dB, shading='gouraud')
+plt.ylabel('Frecuencia (Hz)')
+plt.xlabel('Tiempo (s)')
+plt.title('Espectrograma EMG')
+
+plt.colorbar(label='Potencia (dB)')
+plt.ylim(0, 500)   # limitar a rango útil
+plt.tight_layout()
+plt.show()
+```
+Este fragmento calcula y visualiza el espectrograma de la señal EMG, mostrando cómo cambia su contenido en frecuencia a lo largo del tiempo. Primero, se definen parámetros como el tamaño de ventana (nperseg) y el solapamiento (noverlap) para el análisis. Luego, con la función spectrogram() se obtiene la distribución tiempo–frecuencia de la señal filtrada. Después, la potencia se convierte a escala logarítmica en decibelios para una mejor visualización. Finalmente, se grafica usando pcolormesh, donde el eje horizontal es el tiempo, el vertical la frecuencia y el color representa la potencia, permitiendo identificar cambios en la actividad muscular a lo largo del tiempo.<br>
+<img width="625" height="321" alt="image" src="https://github.com/user-attachments/assets/81bb3d54-9e83-4624-b32e-771efc0947e7" /><br>
+En el espectrograma de la señal EMG se observa que la mayor concentración de energía se mantiene principalmente en el rango de 50 a 150 Hz a lo largo de todo el registro, lo cual es típico de la actividad muscular. Sin embargo, al analizar la evolución temporal, se evidencia una ligera reducción de la intensidad en las frecuencias más altas y un aumento relativo en las bajas, lo que sugiere un desplazamiento espectral asociado a la fatiga muscular. También se distinguen zonas con mayor intensidad de color (amarillo) que corresponden a momentos de mayor activación muscular, intercaladas con regiones de menor potencia. Adicionalmente, se pueden notar bandas horizontales tenues que podrían estar relacionadas con componentes específicas o ruido residual, pero en general la señal muestra un comportamiento estable con variaciones progresivas que reflejan cambios en el esfuerzo del músculo a lo largo del tiempo.
+
 
 
  ### Preguntas para la discusión
