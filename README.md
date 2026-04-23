@@ -108,7 +108,7 @@ print(f"Posiciones (muestras): {picos}")
 print(f"Tiempos (s): {tiempo[picos].round(3)}")
    ```
 ![deteccion_contracciones](2_deteccion_contracciones.png)
-
+ ```
 
 
 ## PARTE B 
