@@ -551,6 +551,54 @@ for i in range(n_comp):
 En la Gráfica se puede apreciar los espectros de las primeras y últimas contracciones.
 En las contracciones iniciales Se aprecia que tienen mayor amplitud en el espectro especialmente en el rango de 20 a 150 Hz Encontraste con las contracciones finales en donde su amplitud disminuye notablemente y sus picos espectrales son menos pronunciados,  este comportamiento es evidencia de la fatiga muscular,  ya que el músculo fatigado usa menos unidades motoras y con menor sincronización lo que reduce Por ende la energía de la señal
 
+
+
+Finalmente se  la realizó en la consola una tabla con los valores de la frecuencia media mediana y duración de cada uno de los 27 segmentos,  esa tabla es fundamental ya que permite comparar numéricamente el comportamiento espectral de cada una de las contracciones
+
+
+
+
+==========================================================
+  PARTE C — RESULTADOS POR CONTRACCIÓN
+==========================================================
+   # |  F. Media (Hz) |  F. Mediana (Hz) | Duración (ms)
+----------------------------------------------------------
+   1 |          93.97 |            83.75 |         800.0
+   2 |          91.86 |            85.00 |         800.0
+   3 |          92.83 |            88.75 |         800.0
+   4 |          93.16 |            80.00 |         800.0
+   5 |         100.07 |            93.75 |         800.0
+   6 |          94.30 |            88.75 |         800.0
+   7 |          95.02 |            80.00 |         800.0
+   8 |          98.80 |            98.75 |         800.0
+   9 |          94.98 |            82.50 |         800.0
+  10 |          96.00 |            87.50 |         800.0
+  11 |          95.36 |            83.75 |         800.0
+  12 |          94.50 |            80.00 |         800.0
+  13 |         106.17 |            98.75 |         800.0
+  14 |         101.55 |            93.75 |         800.0
+  15 |         100.08 |            92.50 |         800.0
+  16 |          95.50 |            82.50 |         800.0
+  17 |          93.68 |            77.50 |         800.0
+  18 |         102.18 |            91.25 |         800.0
+  19 |          94.59 |            78.75 |         800.0
+  20 |          90.62 |            78.75 |         800.0
+  21 |          90.78 |            72.50 |         800.0
+  22 |         102.92 |            95.00 |         800.0
+  23 |          94.39 |            87.50 |         800.0
+  24 |          97.56 |            88.75 |         800.0
+  25 |          87.32 |            71.25 |         800.0
+  26 |          90.38 |            80.00 |         800.0
+  27 |          91.69 |            82.50 |         800.0
+==========================================================
+Prom |          95.56 |            85.32 |
+ Std  |           4.29 |             7.15 |
+==========================================================
+
+
+En este punto se graficó la evolución de la frecuencia media y mediana a lo largo de las 27 contracciones, en la Gráfica se puede observar que la media se mantiene relativamente estable entre los 90 y 106 Hz a lo largo de las 27 contracciones,  en contraste la frecuencia mediana presenta oscilaciones entre 71 y 99 Hz ,
+En las contracciones finales se puede apreciar Una ligera tendencia a disminuir,  lo que significa que la fatiga muscular se relaciona con la reducción de la amplitud espectral. 
+![30](30.png)
  #### D 
  ##### ALGORITMO
  <img width="158" height="347" alt="image" src="https://github.com/user-attachments/assets/d991665e-6429-4e66-85fc-c978be3c39fd" /><br>
