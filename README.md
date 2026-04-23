@@ -464,9 +464,14 @@ En la gráfica de evolución de la fatiga muscular se observa que la frecuencia 
 ### CODIGO
 Para la primera parte se busco aplicar la Transformada Rápida de Fourier (FFT) a cada contracción de la
 señal EMG real.
+ ### A
+ 
 ## PARTE C
 
  ### A
+
+
+ 
  ### B
  ### C
  #### D 
