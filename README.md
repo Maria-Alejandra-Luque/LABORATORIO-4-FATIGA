@@ -23,7 +23,7 @@ segmentación y análisis de señales biomédicas.
 En esta parte de laboratorio se realizó el procesamiento y análisis de una señal EMG simulada obtenida por un generador de ondas de laboratorio,  El objetivo principal fue aplicar las técnicas de filtrado, segmentación y análisis espectral sobre una señal controlada, lo que permite verificar el correcto funcionamiento del código antes de aplicarlo sobre una señal real. a esta señal se le aplicó un filtro fir con ventana hamming para eliminar las frecuencias no deseadas ademas y se calculó la frecuencia media y mediana de cada una mediante la Transformada Rápida de Fourier (FFT)
 
 ### ALGORITMO 
-
+![algoritmo_parte_a](algoA.jpeg)
 ### CODIGO 
 Para comenzar el análisis, se definieron los parámetros principales que se utilizarán a lo largo del código.
 ```
