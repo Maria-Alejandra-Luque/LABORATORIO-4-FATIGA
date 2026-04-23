@@ -499,6 +499,8 @@ En el espectrograma de la señal EMG se observa que la mayor concentración de e
 
 ### E
 ##### ALGORITMO 
+<img width="154" height="341" alt="image" src="https://github.com/user-attachments/assets/e9315695-426e-40cd-84df-99794b143983" /><br>
+
 ##### CODIGO
 ```
 seg_inicio = x_filt[0:L]
