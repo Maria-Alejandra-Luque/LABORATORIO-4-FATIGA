@@ -66,6 +66,27 @@ senal_filtrada = filtfilt(coef_b, [1.0], senal)
 ```
 Se  utilizó filtfilt en lugar de lfilter ya que se debe  aplicar el filtro dos veces, una hacia adelante y otra hacia atrás, lo que permite  garantizar que la señal filtrada no se desfase.
 
+Posterior al filtrado, , se graficaron la señal original y la señal filtrada para comparar los resultados obtenidos
+```
+fig, axs = plt.subplots(2, 1, figsize=(14, 6), sharex=True)
+
+axs[0].plot(tiempo, senal, color='steelblue', alpha=0.8, linewidth=0.8)
+axs[0].set_title('Señal EMG Original')
+axs[0].set_ylabel('Amplitud (V)')
+axs[0].grid(True)
+
+axs[1].plot(tiempo, senal_filtrada, color='darkorange', linewidth=0.8)
+axs[1].set_title(f'Señal EMG Filtrada (pasabanda {F_bajo}–{F_alto} Hz, FIR Hamming orden {ordenf})')
+axs[1].set_ylabel('Amplitud (V)')
+axs[1].set_xlabel('Tiempo (s)')
+axs[1].grid(True)
+
+plt.tight_layout()
+plt.savefig('1_senal_original_vs_filtrada.png', dpi=150)
+plt.show()
+```
+Al comparar   las gráficas obtenidas, el filtro eliminó correctamente las  bajas frecuencia, y las  altas frecuencias, conservando únicamente la actividad muscular de interés.
+![senal_original_vs_filtrada](1_senal_original_vs_filtrada.png)
 ## PARTE B 
 En la parte B se realizará el procesamiento y análisis de una señal electromiográfica (EMG) adquirida por medio del BITalino y sus respectivos electrodos con el objetivo de
 evaluar el comportamiento espectral asociado a la fatiga muscular. Para ello, la señal será preprocesada mediante la eliminación del componente DC y la aplicación de un
