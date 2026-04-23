@@ -194,4 +194,36 @@ leyenda y cuadrícula para facilitar la interpretación.<br>
 Esta gráfica permite observar posibles disminuciones en la frecuencia, que suelen estar asociadas a la aparición de fatiga muscular.<br>
 ### GRAFICAS
 
+<img width="473" height="341" alt="image" src="https://github.com/user-attachments/assets/dcfe94cc-3254-41ca-8ec7-c5ba5d56b3b2" /><br>
+La gráfica muestra la señal EMG ya filtrada en el tiempo. Se puede observar que al inicio la amplitud es bastante alta y con muchas variaciones, lo que indica una mayor actividad muscular. A medida que avanzan las muestras, la señal va disminuyendo su amplitud y se vuelve más “suave”, lo que puede relacionarse con fatiga muscular, ya que el músculo pierde fuerza y la activación disminuye. También se ven algunos picos aislados, que pueden corresponder a contracciones más fuertes en ciertos momentos. En general, la señal está bien centrada y sin ruido evidente, lo que confirma que el filtrado fue adecuado.<br>
+
+<img width="448" height="345" alt="image" src="https://github.com/user-attachments/assets/cc6b60c4-c669-49c4-9ca5-3550a587d3a3" /><br>
+En este espectro de la ventana 1 se observa cómo está distribuida la energía de la señal en frecuencia. La mayor parte de la potencia se concentra aproximadamente entre 50 y 150 Hz, con un pico marcado cerca de los 100 Hz, lo cual es típico en señales EMG. Esto indica que en esta primera parte hay una alta actividad muscular con predominio de frecuencias medias. Fuera de ese rango, la potencia es mucho menor, lo que muestra que el filtrado funcionó bien al eliminar componentes no relevantes.<br>
+
+<img width="430" height="338" alt="image" src="https://github.com/user-attachments/assets/74cace54-e5f0-42a6-ada6-4785667ef78b" /><br>
+En este espectro de la ventana 2 se observa un comportamiento muy similar al de la ventana 1, donde la mayor parte de la potencia sigue concentrada entre aproximadamente 50 y 150 Hz. Sin embargo, se notan picos un poco más altos y definidos, lo que puede indicar una contracción muscular más fuerte o más estable en este segmento. El hecho de que la energía siga en ese rango confirma que la señal mantiene características típicas de EMG y que el filtrado continúa siendo adecuado.
+
+<img width="434" height="341" alt="image" src="https://github.com/user-attachments/assets/49bcaa6b-cd06-4bbf-b09f-aae36e4693d0" /><br>
+En el espectro de la ventana 3 se observa que la mayor parte de la potencia sigue concentrada entre 50 y 150 Hz, pero en este caso los picos son más altos, lo que indica una mayor energía en la señal en este segmento. Esto puede relacionarse con una contracción muscular más intensa o un mayor esfuerzo en ese intervalo. En general, se nota un aumento en la magnitud del espectro en comparación con las ventanas anteriores.<br>
+
+<img width="422" height="337" alt="image" src="https://github.com/user-attachments/assets/92be1c6d-8a8f-4e30-b2b1-e300249f7821" /><br>
+En el espectro de la ventana 4 se observa que la mayor parte de la potencia de la señal se concentra en el rango aproximado de 60 a 140 Hz, lo cual es característico de señales EMG con predominio de frecuencias medias. Se destaca un pico muy pronunciado alrededor de los 100 Hz, indicando una componente dominante y una mayor actividad muscular en este segmento. Además, aparecen otros picos de menor magnitud dentro del mismo rango, lo que sugiere variaciones en la activación. Por fuera de estas frecuencias, la potencia disminuye considerablemente, evidenciando que el contenido relevante de la señal está bien concentrado.<br>
+
+<img width="431" height="341" alt="image" src="https://github.com/user-attachments/assets/825f4bf6-bf1a-4424-b408-868749d5609b" /><br>
+En el espectro de la ventana 5 se observa que la energía de la señal se concentra principalmente entre aproximadamente 60 y 150 Hz, manteniendo el comportamiento típico de una señal EMG en frecuencias medias. Se destaca un pico dominante cercano a los 100 Hz, aunque con menor intensidad que en la ventana anterior, lo que sugiere una ligera variación en la actividad muscular. También se evidencian varios picos secundarios dentro del mismo rango, indicando variabilidad en la señal. Fuera de este intervalo, la potencia es considerablemente menor, lo que confirma que la información relevante está bien localizada en ese rango de frecuencias.<br>
+
+<img width="418" height="338" alt="image" src="https://github.com/user-attachments/assets/fa60587f-2afd-4e50-a394-059bb0c832b8" /><br>
+En el espectro de la ventana 6 se observa que la mayor parte de la potencia se concentra entre aproximadamente 60 y 140 Hz, lo que sigue siendo característico de una señal EMG con predominio en frecuencias medias. Se destaca un pico muy pronunciado alrededor de los 100 Hz, incluso más alto que en la ventana anterior, lo que indica un aumento en la actividad muscular en este segmento. Además, se presentan varios picos secundarios dentro del mismo rango, reflejando variabilidad en la señal. Fuera de este intervalo, la potencia es baja, evidenciando que el contenido relevante de la señal está bien concentrado en ese rango de frecuencias.<br>
+
+| VENTANA | F MEDIA | F MEDIANA|ANALISIS |
+|---------|---------|----------|-----------|
+| 1 |95.97655657 | 86.85015291 |Se observa una frecuencia media y mediana relativamente altas,lo que indica buena actividad muscular y poca fatiga al inicio.|
+| 2 |95.2666646  | 83.66972477 |Hay una leve disminución en la frecuencia mediana, lo que puede empezar a mostrar un pequeño cambio en la respuesta muscular.|
+| 3 |96.32907568 | 84.15902141 |La frecuencia media aumenta un poco, lo que sugiere que aún hay buena activación muscular en este punto.|
+| 4 |96.70913381 | 82.32415902 |Se mantiene la frecuencia media alta, pero la mediana baja ligeramente, lo que podría indicar el inicio de fatiga.|
+| 5 |95.80389132 | 80.97859327 |Ambas frecuencias disminuyen más, mostrando una tendencia más clara hacia fatiga muscular.|
+| 6 |92.85376582 | 80.24464832 |Se observa la menor frecuencia media y mediana, lo que indica mayor fatiga y reducción en la actividad muscular.|
+
+<img width="441" height="338" alt="image" src="https://github.com/user-attachments/assets/7abe2fa0-58f9-41ae-9303-fd5850e1df3d" /><br>
+En la gráfica de evolución de la fatiga muscular se observa que la frecuencia mediana presenta una tendencia descendente a medida que avanzan las ventanas, pasando de valores cercanos a 87 Hz hasta aproximadamente 80 Hz, lo cual es un indicador típico de fatiga muscular. Por otro lado, la frecuencia media se mantiene relativamente estable alrededor de los 95–97 Hz durante las primeras ventanas, pero muestra una ligera disminución hacia el final. Este comportamiento sugiere que, aunque la actividad global se mantiene, hay un desplazamiento del contenido espectral hacia frecuencias más bajas, confirmando la aparición progresiva de fatiga en el músculo analizado.<br>
 ## PARTE C 
