@@ -498,7 +498,11 @@ Posterior a la carga y la conversión de la señal se  le aplicó un filtro pasa
 b, a   = butter(4, [20/(Fs/2), 450/(Fs/2)], btype='band')
 x_filt = filtfilt(b, a, emg)
 ```
+![senal_filtrada](C_0_senal_filtrada.png)
+ En la grafica  se muestra la señal EMG real ya filtrada en el dominio del tiempo, donde se pueden apreciar las 27 contracciones musculares a lo largo de la toma de la señal.
 
+
+ Para identificar cada contracción se aplicó la función find_peaks El valor absoluto de la señal filtrada,  el umbral se definió Dos. Tres veces la desviación estándar de la señal,  para la obtención de 27 muestras de contracción,  el parámetro distance=1000 Garantiza que la distancia entre dos picos detectados sea de al menos 100 muestras de separación
 ## PARTE C
 
  ### A
