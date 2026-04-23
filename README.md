@@ -506,16 +506,22 @@ x_filt = filtfilt(b, a, emg)
  ![deteccion_contracciones](C_1_deteccion_contracciones.png)
 
  Luego de la identificación de picos se hizo una ventana de 400 muestras antes y después de cada uno, Se usaron max y min para evitar que la ventana se salga de los límites de la señal.
- ![segmentos_individuales](C_2_segmentos_individuales.png)
- 
- 
-## PARTE C
-
- ### A
+ ![segmentos](segmentos.png)
 
 
+ ### A y B
+
+Para poder analizar el contenido frecuencial de cada contracción identificada en la señal,  se aplicó la transformada rápida de fourier,  en este caso se aplicó una ventana de hand con antelación al cálculo de la FFT  para reducir el efecto Leakage 
+```
+N   = len(segment)
+win = np.hanning(N)
+yf  = fft(segment * win)
+xf  = fftfreq(N, 1/Fs)[:N//2]
+psd = np.abs(yf[:N//2]) ** 2
+amp = np.abs(yf[:N//2]) / N
+```
  
- ### B
+
  ### C
  #### D 
  ##### ALGORITMO
