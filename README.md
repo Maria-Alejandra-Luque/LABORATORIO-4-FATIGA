@@ -506,6 +506,7 @@ x_filt = filtfilt(b, a, emg)
  ![deteccion_contracciones](C_1_deteccion_contracciones.png)
 
  Luego de la identificación de picos se hizo una ventana de 400 muestras antes y después de cada uno, Se usaron max y min para evitar que la ventana se salga de los límites de la señal.
+ ![segmentos_individuales](C_2_segmentos_individuales.png)
  
  
 ## PARTE C
