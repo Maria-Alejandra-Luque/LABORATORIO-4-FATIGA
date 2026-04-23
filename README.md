@@ -494,7 +494,41 @@ Este fragmento calcula y visualiza el espectrograma de la señal EMG, mostrando 
 <img width="625" height="321" alt="image" src="https://github.com/user-attachments/assets/81bb3d54-9e83-4624-b32e-771efc0947e7" /><br>
 En el espectrograma de la señal EMG se observa que la mayor concentración de energía se mantiene principalmente en el rango de 50 a 150 Hz a lo largo de todo el registro, lo cual es típico de la actividad muscular. Sin embargo, al analizar la evolución temporal, se evidencia una ligera reducción de la intensidad en las frecuencias más altas y un aumento relativo en las bajas, lo que sugiere un desplazamiento espectral asociado a la fatiga muscular. También se distinguen zonas con mayor intensidad de color (amarillo) que corresponden a momentos de mayor activación muscular, intercaladas con regiones de menor potencia. Adicionalmente, se pueden notar bandas horizontales tenues que podrían estar relacionadas con componentes específicas o ruido residual, pero en general la señal muestra un comportamiento estable con variaciones progresivas que reflejan cambios en el esfuerzo del músculo a lo largo del tiempo.
 
+### E
+```
+seg_inicio = x_filt[0:L]
+seg_final = x_filt[-L:]
 
+def espectro(seg):
+    Y = np.fft.fft(seg)
+    P = np.abs(Y)**2
+    f = np.fft.fftfreq(len(seg), d=1/fs)
+    mask = f >= 0
+    return f[mask], P[mask]
+f1, P1 = espectro(seg_inicio)
+f2, P2 = espectro(seg_final)
+
+plt.figure()
+plt.semilogx(f1, P1, label='Inicio')
+plt.semilogx(f2, P2, label='Final')
+
+plt.title("Comparación espectral")
+plt.xlabel("Frecuencia (Hz)")
+plt.ylabel("Potencia")
+plt.legend()
+plt.grid()
+plt.show()
+```
+Este fragmento compara el contenido en frecuencia entre el inicio y el final de la señal EMG. Primero, se seleccionan dos segmentos: la primera ventana y la última. Luego, se define una función que calcula el espectro de potencia de cada segmento usando la FFT y tomando solo las frecuencias positivas. Después, se obtienen los espectros de ambos segmentos y se grafican en la misma figura con escala logarítmica en frecuencia. Esto permite visualizar fácilmente las diferencias entre el inicio y el final, evidenciando posibles cambios en la distribución de la energía asociados a la fatiga muscular.<br>
+
+<img width="425" height="329" alt="image" src="https://github.com/user-attachments/assets/532949bd-80be-485b-87df-27c2a13ae3ea" /><br>
+En esta gráfica se compara el espectro al inicio y al final de la señal. Se observa que al inicio (azul) la potencia es mucho mayor y está más distribuida, especialmente entre 50 y 120 Hz, lo que indica una mayor actividad muscular. En cambio, al final (naranja) la potencia disminuye notablemente y el espectro se ve más bajo y concentrado, lo que sugiere una reducción en la energía de la señal. Esto es un comportamiento típico de fatiga muscular, donde con el tiempo disminuye la intensidad de la activación.<br>
+
+
+### F
+```
+
+```
 
  ### Preguntas para la discusión
  1. ¿Cambian los valores de frecuencia media y mediana a medida que el
