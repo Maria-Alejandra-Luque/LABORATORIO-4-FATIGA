@@ -133,6 +133,81 @@ Para cada pico detectado se recortó una ventana de 150 muestras antes y 150 mue
 Como se observa en la Gráfica cada segmento muestra la actividad muscular en el pico de contracción,  al observar detalladamente todos los segmentos presentan una forma parecida con una deflexión central pronunciada correspondiente al momento de máxima activación muscular.
 
 
+Para obtener la frecuencia media y la frecuencia mediana de cada segmento fue necesario calcular el espectro de frecuencias mediante la transformada rápida de fourier (FFT)
+```
+freq_medias   = []
+freq_medianas = []
+
+fig, axs = plt.subplots(len(segmentos), 1, figsize=(10, 3 * len(segmentos)))
+if len(segmentos) == 1:
+    axs = [axs]
+
+for i, seg in enumerate(segmentos):
+    N  = len(seg)
+    T  = 1 / Fs
+    yf = fft(seg)
+    xf = fftfreq(N, T)[:N // 2]
+    psd = np.abs(yf[:N // 2]) ** 2
+
+    mask = xf > 0
+    xf_f  = xf[mask]
+    psd_f = psd[mask]
+
+    f_media = np.sum(xf_f * psd_f) / np.sum(psd_f)
+
+    cumsum = np.cumsum(psd_f)
+    idx_med = np.where(cumsum >= cumsum[-1] / 2)[0]
+    f_mediana = xf_f[idx_med[0]] if len(idx_med) > 0 else 0
+
+    freq_medias.append(f_media)
+    freq_medianas.append(f_mediana)
+
+```
+Para obtener la frecuencia media y la frecuencia mediana de cada segmento fue necesario calcular el espectro de frecuencias mediante la transformada rápida de fourier (FFT)
+
+A cada segmento se le aplicó la transformada rápida de fourier para obtener la representación de la señal en El dominio de la frecuencia,  posterior a esto se calculó la densidad espectral de potencia.
+
+ La frecuencia media se obtuvo como un promedio ponderado de las frecuencias por su potencia mientras que la frecuencia mediana corresponde a la frecuencia en la que la potencia alcanza el 50% de su energía total del espectro,  o sea se divide el espectro en dos Mitades de igual energía
+```
+axs[i].plot(xf_f, psd_f, color=colores[i], linewidth=0.9)
+    axs[i].axvline(f_media,   color='red',   linestyle='--', label=f'Media: {f_media:.1f} Hz')
+    axs[i].axvline(f_mediana, color='green', linestyle='--', label=f'Mediana: {f_mediana:.1f} Hz')
+    axs[i].set_title(f'Espectro - Contracción {i+1}')
+    axs[i].set_xlabel('Frecuencia (Hz)')
+    axs[i].set_ylabel('Potencia (u.a.)')
+    axs[i].set_xlim(0, Fs / 2)
+    axs[i].legend(fontsize=9)
+    axs[i].grid(True)
+```
+
+![espectros_FFT](4_espectros_FFT.png)
+Al observar las gráficas se puede apreciar que la mayor concentración de energía de cada contracción se encuentra entre los 20 y 150 Hz,  lo cual corresponde a un rasgo fisiológico de una señal EMG.
+
+ La línea roja indica la frecuencia media mientras que la línea verde indica la frecuencia mediana de cada contracción
+
+Posterior a el cálculo de la media y mediana para  cada contracción,  se realizó su respectivo gráfico de  su evolución a lo largo de 10 contracciones para observar si alguna tendencia relacionada con la fatiga muscular
+```
+contracciones = np.arange(1, len(segmentos) + 1)
+
+plt.figure(figsize=(8, 4))
+plt.plot(contracciones, freq_medias,   'ro-', linewidth=2, markersize=8, label='Frecuencia media')
+plt.plot(contracciones, freq_medianas, 'gs--', linewidth=2, markersize=8, label='Frecuencia mediana')
+plt.xticks(contracciones)
+plt.xlabel('Número de contracción')
+plt.ylabel('Frecuencia (Hz)')
+plt.title('Evolución de la frecuencia media y mediana')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('5_evolucion_frecuencias.png', dpi=150)
+plt.show()
+
+```
+
+Se calcularon ambas frecuencias en función del número de contracción, utilizando puntos para identificar la frecuencia media y cuadrados para identificar la frecuencia mediana 
+![evolucion_frecuencias](5_evolucion_frecuencias.png)
+Cómo se puede observar en la gráfica,  las frecuencias no presentan una tendencia descendente a lo largo de cada contracción, al contrario oscilan entre cada contracción.  esto tiene lógica debido a que la señal analizada es simulada,  Por ende las contracciones son principalmente idénticas entre sí y no se puede observar una Clara fatiga muscular real
+
 
 ## PARTE B 
 En la parte B se realizará el procesamiento y análisis de una señal electromiográfica (EMG) adquirida por medio del BITalino y sus respectivos electrodos con el objetivo de
