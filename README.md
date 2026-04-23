@@ -471,4 +471,4 @@ escenarios como, por ejemplo, terapias de rehabilitación?
 
 La FFT al permitir analizar el contenido frecuencial de la señal EMG de forma no invasiva, permite  monitorear la salud muscular de un paciente en estado de rehabilitación sin la necesidad de realizar procedimientos invasivos. Al seguir la evolución de la frecuencia media y mediana a lo largo del tiempo, el terapeuta puede deterrminar si el musculo presenta signos de mejoria  o si aún presenta signos de fatiga, asi para ir ajustando el plan de rehabilitación según los datos obtenidos en favor de la recuperacion del paciente
 
-### Colclusiones 
+### Conclusiones 
