@@ -503,6 +503,11 @@ x_filt = filtfilt(b, a, emg)
 
 
  Para identificar cada contracción se aplicó la función find_peaks El valor absoluto de la señal filtrada,  el umbral se definió Dos. Tres veces la desviación estándar de la señal,  para la obtención de 27 muestras de contracción,  el parámetro distance=1000 Garantiza que la distancia entre dos picos detectados sea de al menos 100 muestras de separación
+ ![deteccion_contracciones](C_1_deteccion_contracciones.png)
+
+ Luego de la identificación de picos se hizo una ventana de 400 muestras antes y después de cada uno, Se usaron max y min para evitar que la ventana se salga de los límites de la señal.
+ 
+ 
 ## PARTE C
 
  ### A
