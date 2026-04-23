@@ -19,7 +19,20 @@ segmentación y análisis de señales biomédicas.
 
 
 ## PARTE A 
+### ALGORITMO 
 
+### CODIGO 
+Para comenzar el análisis, se definieron los parámetros principales que se utilizarán a lo largo del código.
+```
+Fs           = 1000       
+F_bajo       = 20         
+F_alto       = 450        
+ordenf = 101        
+factorumbral = 0.45      
+Distanciapicos = 200     
+Ventana  = 150
+```
+Fs = 1000 corresponde a la frecuencia de muestreo con la que se capturó la señal, es decir, se tomaron 1000 muestras por segundo.para  = 20 y F_ALTO = 450 son las frecuencias de corte del filtro pasabanda, que delimitan el rango de frecuencias fisiológicamente relevantes en una señal EMG. ORDEN_FILTRO = 101 define qué tan selectivo será el filtro (debe ser impar en filtros FIR). UMBRAL_FACTOR = 0.45 indica que solo se considerarán como contracciones los picos que superen el 45% del valor máximo positivo de la señal. DISTANCIA_PICOS = 200 establece que entre dos picos detectados debe haber al menos 200 muestras de separación, evitando detectar dos veces el mismo evento. Finalmente, VENTANA_SEG = 150 determina cuántas muestras se extraen antes y después de cada pico para conformar el segmento de cada contracción.
 ## PARTE B 
 En la parte B se realizará el procesamiento y análisis de una señal electromiográfica (EMG) adquirida por medio del BITalino y sus respectivos electrodos con el objetivo de
 evaluar el comportamiento espectral asociado a la fatiga muscular. Para ello, la señal será preprocesada mediante la eliminación del componente DC y la aplicación de un
