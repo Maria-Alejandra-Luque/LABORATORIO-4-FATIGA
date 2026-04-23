@@ -534,6 +534,20 @@ en esta grafica se muestra el espectro de amplitud de cada una de las 27 contrac
 
  ### C
  
+Para poder evidenciar el efecto de la fatiga muscular sobre el espectro de la señal, se compararon los espectros de las tres primeras contracciones con las tres últimas en una misma gráfica,  las contracciones iniciales se graficaron en tonalidad azul con una línea continua y las finales se dibujaron con rojo con una línea discontinua
+```
+n_comp = 3
+for i in range(n_comp):
+    seg = segments[i]           # contracciones iniciales
+    ...
+for i in range(n_comp):
+    idx = len(segments) - n_comp + i   # contracciones finales
+    seg = segments[idx]
+    ...
+
+
+```
+
  #### D 
  ##### ALGORITMO
  <img width="158" height="347" alt="image" src="https://github.com/user-attachments/assets/d991665e-6429-4e66-85fc-c978be3c39fd" /><br>
