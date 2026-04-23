@@ -493,7 +493,11 @@ emg_raw  = data_raw[:, 5]
 emg = ((emg_raw / 1024.0) - 0.5) * 3.3 * 1000
 emg = emg - np.mean(emg)
 ```
-
+Posterior a la carga y la conversión de la señal se  le aplicó un filtro pasa banda para evitar el ruido que esté por fuera del Rango interés,  para esta parte se hizo uso de un filtro butterworth de orden 4 Ya que ofrece una respuesta en frecuencia más suave y sin rizados
+```
+b, a   = butter(4, [20/(Fs/2), 450/(Fs/2)], btype='band')
+x_filt = filtfilt(b, a, emg)
+```
 
 ## PARTE C
 
