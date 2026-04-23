@@ -87,6 +87,27 @@ plt.show()
 ```
 Al comparar   las gráficas obtenidas, el filtro eliminó correctamente las  bajas frecuencia, y las  altas frecuencias, conservando únicamente la actividad muscular de interés.
 ![senal_original_vs_filtrada](1_senal_original_vs_filtrada.png)
+
+Para la identificacion de cada contración ocurrida durante la señal, se opto por detectar los picos presentes en esta en la parte positiva de la señal filtrada
+```
+senal_positiva = senal_filtrada.copy()
+senal_positiva[senal_positiva < 0] = 0
+
+umbral = factorumbral * np.max(senal_positiva)
+
+picos, propiedades = find_peaks(senal_positiva, height=umbral, distance=Distanciapicos)
+```
+Al usar la señal filtrada ee pusieron todos los valores negativos en cero para obtener únicamente los picos positivos, posterior a esto  se calculó el umbral multiplicando el valor máximo positivo de la señal por "factorumbral = 0.45" para lograr una  detección correcta  de las contracciones presentes en la señal
+
+Finalmente, el comando find_peaks se encarga de buscar todos los picos que cumplan dos condiciones:
+1. Que superen el umbral calculado
+2. Que estén separados entre sí por al menos Distanciapicos = 200 muestras (equivalente a 0.2 segundos)
+   ```
+   print(f"Contracciones detectadas: {len(picos)}")
+print(f"Posiciones (muestras): {picos}")
+print(f"Tiempos (s): {tiempo[picos].round(3)}")
+   ```
+![deteccion_contracciones](2_deteccion_contracciones.png)
 ## PARTE B 
 En la parte B se realizará el procesamiento y análisis de una señal electromiográfica (EMG) adquirida por medio del BITalino y sus respectivos electrodos con el objetivo de
 evaluar el comportamiento espectral asociado a la fatiga muscular. Para ello, la señal será preprocesada mediante la eliminación del componente DC y la aplicación de un
