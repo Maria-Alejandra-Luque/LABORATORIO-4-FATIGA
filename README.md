@@ -296,6 +296,15 @@ En el espectro de la ventana 5 se observa que la energía de la señal se concen
 <img width="418" height="338" alt="image" src="https://github.com/user-attachments/assets/fa60587f-2afd-4e50-a394-059bb0c832b8" /><br>
 En el espectro de la ventana 6 se observa que la mayor parte de la potencia se concentra entre aproximadamente 60 y 140 Hz, lo que sigue siendo característico de una señal EMG con predominio en frecuencias medias. Se destaca un pico muy pronunciado alrededor de los 100 Hz, incluso más alto que en la ventana anterior, lo que indica un aumento en la actividad muscular en este segmento. Además, se presentan varios picos secundarios dentro del mismo rango, reflejando variabilidad en la señal. Fuera de este intervalo, la potencia es baja, evidenciando que el contenido relevante de la señal está bien concentrado en ese rango de frecuencias.<br>
 
+|VENTANA | ANALISIS DE GRAFICA |
+|--------|----------------------|
+| 1 | Espectro con energía concentrada entre 50–150 Hz, picos definidos. Señal estable y con buena activación. |
+| 2 | Similar a la anterior, pero con picos un poco más marcados, indicando mayor intensidad en la contracción. |
+| 3 | Se observan picos más altos, mayor energía en el espectro, lo que sugiere una contracción más fuerte.|
+| 4 | La energía sigue en el mismo rango, pero los picos empiezan a bajar ligeramente. |
+| 5 | Disminución más evidente en la amplitud del espectro, señal menos intensa.|
+| 6 | Menor energía en general, espectro más “suave”, indicando reducción en la actividad muscular.|
+
 | VENTANA | F MEDIA | F MEDIANA|ANALISIS |
 |---------|---------|----------|-----------|
 | 1 |95.97655657 | 86.85015291 |Se observa una frecuencia media y mediana relativamente altas,lo que indica buena actividad muscular y poca fatiga al inicio.|
