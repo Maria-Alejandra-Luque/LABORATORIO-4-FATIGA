@@ -460,6 +460,9 @@ En la gráfica de evolución de la fatiga muscular se observa que la frecuencia 
 
 ***TRABAJADO EN JUPYTER NOTEBOOK:http://localhost:8888/doc/tree/lab4.ipynb***
  ## PARTE C
+ 
+En esta parte de la guía se realizó el análisis espectral de una señal EMG  capturada mediante un Bitalino para evaluar las contracciones Hechas hasta alcanzar la fatiga muscular,  el objetivo principal fue aplicar la transformada rápida de fourier a cada contracción individual para analizar Cómo cambia el contenido frecuencial a medida que el músculo a partir de la contracción empieza a fatigarse
+
 ### ALGORITMO 
 ### CODIGO
 Para la primera parte se busco aplicar la Transformada Rápida de Fourier (FFT) a cada contracción de la
