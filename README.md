@@ -228,7 +228,7 @@ print("=" * 55)
 
 ```
 La tabla obtenida fue:
-```
+
 =======================================================
   RESULTADOS POR CONTRACCIÓN
 =======================================================
@@ -248,7 +248,7 @@ La tabla obtenida fue:
 Prom |         112.65 |            83.05 |
  Std |           9.72 |            10.96 |
 =======================================================
-```
+
 Al observar con detenimiento la tabla la frecuencia media de las  contracciones se mueve entre 101 y 126 hz,  también se observa que la frecuencia mediana tiene variaciones entre 67 y 97 hz.
 Al observar la contracción uno se observa una duración menor debido a que el pico fue detectado cerca del inicio de la señal, por lo que la señal quedó más recortada en ese extremo
 
@@ -444,7 +444,7 @@ En el espectro de la ventana 6 se observa que la mayor parte de la potencia se c
 | 3 | Se observan picos más altos, mayor energía en el espectro, lo que sugiere una contracción más fuerte.|
 | 4 | La energía sigue en el mismo rango, pero los picos empiezan a bajar ligeramente. |
 | 5 | Disminución más evidente en la amplitud del espectro, señal menos intensa.|
-| 6 | Menor energía en general, espectro más “suave”, indicando reducción en la actividad muscular.|
+| 6 | Menor energía en general, espectro más “suave”, indicando reducción en la actividad muscular.|   <br>
 
 | VENTANA | F MEDIA | F MEDIANA|ANALISIS |
 |---------|---------|----------|-----------|
