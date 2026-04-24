@@ -229,25 +229,27 @@ print("=" * 55)
 ```
 La tabla obtenida fue:
 
-=======================================================
-  RESULTADOS POR CONTRACCIÓN
-=======================================================
-   # |  F. Media (Hz) |  F. Mediana (Hz) | Duración (ms)
--------------------------------------------------------
-   1 |         126.19 |            97.14 |         175.0
-   2 |         101.99 |            80.00 |         300.0
-   3 |         114.34 |            70.00 |         300.0
-   4 |         124.26 |            96.67 |         300.0
-   5 |         102.82 |            83.33 |         300.0
-   6 |         107.52 |            70.00 |         300.0
-   7 |         124.45 |            96.67 |         300.0
-   8 |         103.63 |            83.33 |         300.0
-   9 |         101.71 |            66.67 |         300.0
-  10 |         119.58 |            86.67 |         300.0
-=======================================================
-Prom |         112.65 |            83.05 |
- Std |           9.72 |            10.96 |
-=======================================================
+
+ ### RESULTADOS POR CONTRACCIÓN
+
+ |  n |  F. Media (Hz) |  F. Mediana (Hz) | Duración (ms)|
+|------|-----------------|-------------------|-------------|
+ |  1 |         126.19 |            97.14 |         175.0|
+ | 2 |         101.99 |            80.00 |         300.0|
+ | 3 |         114.34 |            70.00 |         300.0|
+ |  4 |         124.26 |            96.67 |         300.0|
+ | 5 |         102.82 |            83.33 |         300.0|
+ |  6 |         107.52 |            70.00 |         300.0|
+ |  7 |         124.45 |            96.67 |         300.0|
+ |  8 |         103.63 |            83.33 |         300.0|
+ |  9 |         101.71 |            66.67 |         300.0|
+ | 10 |         119.58 |            86.67 |         300.0|
+
+|     TIPO |    MEDIA     | MEDIANA    |
+|---------|---------------|---------|
+ |Prom |         112.65 |            83.05 |
+ |Std |           9.72 |            10.96 |
+
 
 Al observar con detenimiento la tabla la frecuencia media de las  contracciones se mueve entre 101 y 126 hz,  también se observa que la frecuencia mediana tiene variaciones entre 67 y 97 hz.
 Al observar la contracción uno se observa una duración menor debido a que el pico fue detectado cerca del inicio de la señal, por lo que la señal quedó más recortada en ese extremo
