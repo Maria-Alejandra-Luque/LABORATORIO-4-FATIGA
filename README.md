@@ -563,10 +563,10 @@ Finalmente se  la realizó en la consola una tabla con los valores de la frecuen
 
 
 
-==========================================================
-  PARTE C — RESULTADOS POR CONTRACCIÓN
-==========================================================
-   # |  F. Media (Hz) |  F. Mediana (Hz) | Duración (ms)
+
+ ###  PARTE C — RESULTADOS POR CONTRACCIÓN
+
+   n |  F. Media (Hz) |  F. Mediana (Hz) | Duración (ms)
 ----------------------------------------------------------
    1 |          93.97 |            83.75 |         800.0
    2 |          91.86 |            85.00 |         800.0
