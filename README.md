@@ -465,7 +465,7 @@ En esta parte de la guía se realizó el análisis espectral de una señal EMG  
 
 ### ALGORITMO 
 
-![99](99.png)
+![99](99.jpg)
 ### CODIGO
 Para la primera parte se busco aplicar la Transformada Rápida de Fourier (FFT) a cada contracción de la
 señal EMG real.
