@@ -677,6 +677,8 @@ Además, el uso de parámetros como la frecuencia media y la frecuencia mediana 
  1. ¿Cambian los valores de frecuencia media y mediana a medida que el
 músculo se acerca a la fatiga? ¿A qué podría atribuirse este cambio?
 
+Tal y cómo están aliso en la parte B, Frecuencia mediana Presenta una tendencia descendente a lo largo de las ventanas,  pasando de aproximadamente 87 Hz hasta 80 Hz, Con la frecuencia media que mostró hacia el final del ejercicio una ligera disminución,  fisiológicamente Este cambio se le puede atribuir a la acumulación de lactato y iones de hidrógeno durante la contracción muscular sostenida,  lo que reduce la velocidad de conducción de los potenciales de acción a lo largo de cada fibra muscular, Esto hace que en el espectro de la señal EMG  se desplaza hacia frecuencias más bajas. 
+
 3.  ¿Cómo justifica el uso de herramientas como la transformada de Fourier en
 escenarios como, por ejemplo, terapias de rehabilitación?
 
